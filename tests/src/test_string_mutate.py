@@ -23,6 +23,21 @@ def test_reverse(service, string, result):
     assert service.reverse() == result
 
 
+@pytest.mark.parametrize(
+    'string, result',
+    [
+        ('test me once', 'once me test'),
+        ('I aM a Test 1', '1 Test a aM I'),
+        ('11 223 4392 a', 'a 4392 223 11'),
+        ('test', 'test')
+    ]
+)
+def test_reverse_words(service, string, result):
+    """Test that methods returns expected"""
+    service.add_string(string)
+    assert service.reverse_words() == result
+
+
 def test_reverse_raise_exception(service):
     """Test that methods returns expected"""
     with pytest.raises(TypeError) as error:

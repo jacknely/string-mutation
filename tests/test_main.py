@@ -6,4 +6,4 @@ def test_main(capsys):
     """Test that main returns the expected response."""
     string_mutation()
     captured = capsys.readouterr()
-    assert captured.out.strip() == 'gnirts_tset'
+    assert captured.out.strip() == 'testing for test string test_string'

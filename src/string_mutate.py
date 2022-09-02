@@ -31,3 +31,7 @@ class StringMutateService:
     def reverse(self) -> str:
         """Returns the reverse of initialised string."""
         return self._string[::-1]
+
+    def reverse_words(self) -> str:
+        """Returns the words in reverse of initialised string."""
+        return " ".join(self._string.split(" ")[::-1])
