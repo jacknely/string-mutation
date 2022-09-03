@@ -27,3 +27,9 @@ To reverse word, use the `-w` flag:
 ```
 ./main.py ./data/dev/sample.txt -w
 ```
+
+## Troubleshooting
+If you run into permission issues, run the below on main.py:
+```
+chmod 777 main.py
+```
